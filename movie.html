@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movies - NetFilm</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: #f9f9f9;
+        }
+
+        .filter-box {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .movie-card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: #fff;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            border-top: 1px solid #ddd;
+            padding: 1rem 0;
+            margin-top: 3rem;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fa-solid fa-film me-2"></i><strong>NetFilm</strong>
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="movie.html">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="favorites.html">Favorites</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Enter some keywords">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Filters -->
+    <div class="container my-5">
+        <div class="filter-box">
+            <h4 class="mb-3"><i class="fa-solid fa-filter me-2 text-primary"></i>Filter Movies</h4>
+            <form class="row g-3">
+                <!-- Genre -->
+                <div class="col-md-3">
+                    <label for="genre" class="form-label">Genre</label>
+                    <select class="form-select" id="genre">
+                        <option selected>Choose...</option>
+                        <option>Action</option>
+                        <option>Adventure</option>
+                        <option>Romance</option>
+                        <option>Drama</option>
+                        <option>Comedy</option>
+                        <option>Horror</option>
+                        <option>Documentary</option>
+                    </select>
+                </div>
+                <!-- Country -->
+                <div class="col-md-3">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select" id="country">
+                        <option selected>Choose...</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                        <option>Japan</option>
+                        <option>South Korea</option>
+                        <option>France</option>
+                        <option>Vietnam</option>
+                    </select>
+                </div>
+                <!-- Year -->
+                <div class="col-md-3">
+                    <label for="year" class="form-label">Year</label>
+                    <select class="form-select" id="year">
+                        <option selected>Choose...</option>
+                        <option>2025</option>
+                        <option>2024</option>
+                        <option>2023</option>
+                        <option>2022</option>
+                        <option>2021</option>
+                        <option>2020</option>
+                        <option>2010 - 2019</option>
+                        <option>2000 - 2009</option>
+                        <option>Before 2000</option>
+                    </select>
+                </div>
+                <!-- Studio -->
+                <div class="col-md-3">
+                    <label for="studio" class="form-label">Production Studio</label>
+                    <select class="form-select" id="studio">
+                        <option selected>Choose...</option>
+                        <option>Warner Bros</option>
+                        <option>Paramount Pictures</option>
+                        <option>20th Century Fox</option>
+                        <option>Disney</option>
+                        <option>Marvel Studios</option>
+                        <option>Netflix</option>
+                        <option>CJ Entertainment</option>
+                    </select>
+                </div>
+                <div class="col-12 text-end">
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-search me-2"></i>Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Movies List -->
+    <div class="container my-4">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card movie-card">
+                    <img src="/assets/godfather.jpg" class="card-img-top"
+                        alt="The Godfather">
+                    <div class="card-body">
+                        <h6 class="card-title">The Godfather</h6>
+                        <p class="text-muted mb-1">USA • 1972</p>
+                        <span class="badge bg-primary">Drama</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card movie-card">
+                    <img src="/assets/titanic.jpg" class="card-img-top"
+                        alt="Titanic">
+                    <div class="card-body">
+                        <h6 class="card-title">Titanic</h6>
+                        <p class="text-muted mb-1">USA • 1997</p>
+                        <span class="badge bg-danger">Romance</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card movie-card">
+                    <img src="/assets/avata.jpg" class="card-img-top"
+                        alt="Avatar">
+                    <div class="card-body">
+                        <h6 class="card-title">Avatar</h6>
+                        <p class="text-muted mb-1">USA • 2009</p>
+                        <span class="badge bg-success">Sci-Fi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card movie-card">
+                    <img src="/assets/Parasite.jpg" class="card-img-top"
+                        alt="Parasite">
+                    <div class="card-body">
+                        <h6 class="card-title">Parasite</h6>
+                        <p class="text-muted mb-1">South Korea • 2019</p>
+                        <span class="badge bg-warning">Thriller</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer text-center text-primary fw-bold">
+        <i class="fa-solid fa-film me-2"></i>Blue Entertainment
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

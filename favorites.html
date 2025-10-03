@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NetFilm - Favorites</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .movie-card {
+            border: 1px solid #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .movie-poster {
+            height: 350px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .movie-info {
+            padding: 15px;
+        }
+
+        .schedule {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .footer {
+            border-top: 1px solid #ddd;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fa-solid fa-film me-2"></i><strong>NetFilm</strong>
+            </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="movie.html">Movies</a></li>
+                    <li class="nav-item"><a class="nav-link active fw-bold" href="favorites.html">Favorites</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Enter some keywords">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+    <div class="container my-5">
+        <h2 class="text-center mb-5"><i class="fa-solid fa-heart text-danger me-2"></i>Your Favorite Movies</h2>
+        <div class="row g-4">
+            <!-- Movie 1 -->
+            <div class="col-md-4">
+                <div class="movie-card">
+                    <img src="/assets/godfather.jpg" alt="The Godfather"
+                        class="movie-poster">
+                    <div class="movie-info">
+                        <h5>The Godfather</h5>
+                        <p class="schedule"><i class="fa-regular fa-clock me-1"></i> Next showing: Oct 5, 2025 - 8:00 PM
+                        </p>
+                        <p>A crime film directed by Francis Ford Coppola, widely regarded as one of the greatest films
+                            in world cinema.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Movie 2 -->
+            <div class="col-md-4">
+                <div class="movie-card">
+                    <img src="/assets/titanic.jpg" alt="Titanic"
+                        class="movie-poster">
+                    <div class="movie-info">
+                        <h5>Titanic</h5>
+                        <p class="schedule"><i class="fa-regular fa-clock me-1"></i> Next showing: Oct 7, 2025 - 9:00 PM
+                        </p>
+                        <p>A romantic drama directed by James Cameron, depicting the tragic sinking of the RMS Titanic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Movie 3 -->
+            <div class="col-md-4">
+                <div class="movie-card">
+                    <img src="/assets/avata.jpg" alt="Avatar"
+                        class="movie-poster">
+                    <div class="movie-info">
+                        <h5>Avatar</h5>
+                        <p class="schedule"><i class="fa-regular fa-clock me-1"></i> Next showing: Oct 10, 2025 - 7:30
+                            PM</p>
+                        <p>A groundbreaking sci-fi film directed by James Cameron, exploring Pandora and its native
+                            inhabitants, the Na’vi.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Movie 4 -->
+            <div class="col-md-4">
+                <div class="movie-card">
+                    <img src="/assets/lion.jpg" alt="Inception"
+                        class="movie-poster">
+                    <div class="movie-info">
+                        <h5>Inception</h5>
+                        <p class="schedule"><i class="fa-regular fa-clock me-1"></i> Next showing: Oct 12, 2025 - 9:15
+                            PM</p>
+                        <p>A sci-fi thriller directed by Christopher Nolan, diving into dreams within dreams and the
+                            nature of reality.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Movie 5 -->
+            <div class="col-md-4">
+                <div class="movie-card">
+                    <img src="/assets/thePost.jpg" alt="Interstellar"
+                        class="movie-poster">
+                    <div class="movie-info">
+                        <h5>Interstellar</h5>
+                        <p class="schedule"><i class="fa-regular fa-clock me-1"></i> Next showing: Oct 15, 2025 - 8:45
+                            PM</p>
+                        <p>A sci-fi masterpiece directed by Christopher Nolan, exploring love, time, and space travel
+                            through a wormhole.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Movie 6 -->
+            <div class="col-md-4">
+                <div class="movie-card">
+                    <img src="/assets/Parasite.jpg" alt="The Dark Knight"
+                        class="movie-poster">
+                    <div class="movie-info">
+                        <h5>The Dark Knight</h5>
+                        <p class="schedule"><i class="fa-regular fa-clock me-1"></i> Next showing: Oct 18, 2025 - 7:00
+                            PM</p>
+                        <p>A superhero classic directed by Christopher Nolan, featuring Batman’s battle against the
+                            Joker in Gotham City.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer text-center text-primary fw-bold">
+        <i class="fa-solid fa-film me-2"></i>Blue Entertainment
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
